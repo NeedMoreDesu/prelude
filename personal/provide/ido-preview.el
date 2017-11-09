@@ -62,8 +62,10 @@ The general rule: (car ido-matches) - item we are watching here."
        ido-current-directory)
       (save-excursion
         (save-window-excursion
-          (when (find-file file)
-            (prog1 (buffer-substring (point-min) (point-max)) (kill-buffer))))))
+          (let ((previous-buffer (get-file-buffer file)))
+            (when (find-file file)
+              (prog1 (buffer-substring (point-min) (point-max))
+                (unless previous-buffer (kill-buffer))))))))
     ((consp (car ido-matches))
       (cond
         ((and (cdar ido-matches) (stringp (cadar ido-matches))) ; interaction with kill-ring-ido.el
