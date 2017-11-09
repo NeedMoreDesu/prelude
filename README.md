@@ -40,13 +40,23 @@ Uhh, self-explanatory.
   drwxr-xr-x  12 divnuy  staff   408 Nov  9 22:36 provide
 ```
 
-`provide` is a directory where custom libraries live (they can be `require`d from there)
+## provide
 
-`other.el` is my set of preferences.
+Is a directory where custom libraries live (they can be `require`d from there)
 
-`keybinding.el` is the only file where custom keybindings go.
+## other.el
+
+It is my set of preferences.
+
+## keybinding.el
+
+Is the only file where custom keybindings go.
 
 Do note that most keybindings use `hyper` key.
+
+## parentheses.el
+
+Parentheses libraries with colorscheme configurations. It's here and not in **provide** because it actually changes something, not just providing new commands.
 
 ## My custom libraries
 
