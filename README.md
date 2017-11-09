@@ -104,3 +104,5 @@ Toggle spacing with `C-z`. It deletes any whitespace at point, and inserts " ", 
 ### try-keys.el
 
 Did you ever enter some mode and don't know anything about what commands it have? This mode allows you to press any button to just call button-description function. `C-g` to quit.
+
+[badge-license]: https://img.shields.io/badge/license-GPL_3-green.svg
