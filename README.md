@@ -44,7 +44,7 @@ Uhh, self-explanatory.
 
 `other.el` is my set of preferences.
 
-`keybinding.el` is the only file where custom keybindings are. My libraries don't do keybindings on their own, but rather `require`d here and bound.
+`keybinding.el` is the only file where custom keybindings go.
 
 Do note that most keybindings use `hyper` key.
 
