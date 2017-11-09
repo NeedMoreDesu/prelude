@@ -28,7 +28,10 @@
 (global-set-key (kbd "H-z") 'undo-tree-visualize)
 
 (require 'comment-toggle)
-(global-set-key (kbd "H-,") 'comment-toggle)
+(global-set-key (kbd "H-/") 'comment-toggle)
+
+(require 'full-indent)
+(global-set-key (kbd "H-,") 'full-indent)
 
 (require 'macos-related)
 (global-set-key [M-return] 'macos-finder-here)
@@ -42,10 +45,23 @@
 (global-set-key (kbd "H-[") 'close-open-paren-left)
 (global-set-key (kbd "H-]") 'close-open-paren-right)
 
+(require 'windmove)
+(global-set-key (kbd "H-<left>")  'windmove-left)
+(global-set-key (kbd "H-<right>") 'windmove-right)
+(global-set-key (kbd "H-<up>")    'windmove-up)
+(global-set-key (kbd "H-<down>")  'windmove-down)
+
+(require 'main-buffer)
+(global-set-key (kbd "H-.") 'switch-to-main-buffer)
+(global-set-key (kbd "H-M-.") 'set-main-buffer)
+
+(require 'projectile)
+(global-set-key (kbd "H-t") 'projectile-toggle-between-implementation-and-test)
+
 (require 'ido-preview)
 (add-hook 'ido-setup-hook
-          (lambda()
-            (define-key ido-completion-map (kbd "C-M-p") (lookup-key ido-completion-map (kbd "C-p")))
-            (define-key ido-completion-map (kbd "C-M-n") (lookup-key ido-completion-map (kbd "C-n"))) ; currently, this makes nothing. Maybe they'll make C-n key lately.
-            (define-key ido-completion-map (kbd "C-p") 'ido-preview-backward)
-            (define-key ido-completion-map (kbd "C-n") 'ido-preview-forward)))
+  (lambda()
+    (define-key ido-completion-map (kbd "C-M-p") (lookup-key ido-completion-map (kbd "C-p")))
+    (define-key ido-completion-map (kbd "C-M-n") (lookup-key ido-completion-map (kbd "C-n"))) ; currently, this makes nothing. Maybe they'll make C-n key lately.
+    (define-key ido-completion-map (kbd "C-p") 'ido-preview-backward)
+    (define-key ido-completion-map (kbd "C-n") 'ido-preview-forward)))
