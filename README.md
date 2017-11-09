@@ -7,7 +7,7 @@ This is a fork of [Emacs Prelude](https://github.com/bbatsov/prelude) with my cu
 
 Some libraries might not be here, so install them with `M-x package-install`.
 
-## What did I do:
+# What did I do:
 
 File `~/.emacs.d/personal/preload/disable-modes.el`
 
@@ -29,6 +29,8 @@ File `~/.emacs.d/personal/preload/disable-modes.el`
 
 Uhh, self-explanatory.
 
+## Directory structure
+
 ```
   ~/.emacs.d/personal:
   total used in directory 40 available 4292517771
@@ -45,6 +47,8 @@ Uhh, self-explanatory.
 `keybinding.el` is the only file where custom keybindings are. My libraries don't do keybindings on their own, but rather `require`d here and bound.
 
 Do note that most keybindings use `hyper` key.
+
+## My custom libraries
 
 ```
 ~/.emacs.d/personal/provide:
@@ -104,5 +108,7 @@ Toggle spacing with `C-z`. It deletes any whitespace at point, and inserts " ", 
 ### try-keys.el
 
 Did you ever enter some mode and don't know anything about what commands it have? This mode allows you to press any button to just call button-description function. `C-g` to quit.
+
+# Cheers :)
 
 [badge-license]: https://img.shields.io/badge/license-GPL_3-green.svg
