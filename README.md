@@ -9,6 +9,8 @@ Some libraries might not be here, so install them with `M-x package-install`.
 
 ## What did I do:
 
+File `~/.emacs.d/personal/preload/disable-modes.el`
+
 ``` emacs-lisp
 (defmacro kill-with-fire (&rest worthless-modes)
   (if worthless-modes
