@@ -58,6 +58,11 @@
 (require 'projectile)
 (global-set-key (kbd "H-t") 'projectile-toggle-between-implementation-and-test)
 
+(require 'open-todo)
+(global-set-key (kbd "H-0") 'open-todo)
+(global-set-key (kbd "H-9") 'open-done)
+(define-key org-mode-map (kbd "C-c 9") 'org-push-task-to-done)
+
 (require 'ido-preview)
 (add-hook 'ido-setup-hook
   (lambda()

@@ -38,3 +38,7 @@
     (select-window (posn-window (event-end event)))
     (find-alternate-file (file-name-sans-versions file t))))
 (define-key dired-mode-map [mouse-2] 'dired-mouse-find-alternate-file)
+
+(require 'mrb-org-mode)
+(setq org-log-done t)
+  
