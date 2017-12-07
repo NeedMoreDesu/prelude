@@ -22,7 +22,8 @@
 (setq ido-use-filename-at-point nil)
 (setq ido-auto-merge-delay-time 99999)
 
-(require 'company)
+(when (require 'company nil 'noerror)
+  (package-install 'company))
 (setq-default company-search-filtering t)
 
 (require 'dired-x)

@@ -1,4 +1,5 @@
 (require 'toggle-spacing)
+(require 'org)
 
 (defun open-todo ()
   (interactive)
