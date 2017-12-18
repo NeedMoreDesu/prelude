@@ -63,6 +63,13 @@
 (global-set-key (kbd "H-9") 'open-done)
 (define-key org-mode-map (kbd "C-c 9") 'org-push-task-to-done)
 
+(require 'add-quote)
+(global-set-key (kbd "H->") 'add-quote)
+(global-set-key (kbd "H-<") 'remove-indent-level)
+
+;; move to custom config files quicker
+(global-set-key (kbd "H-p") (lambda () (interactive) (find-file "~/.emacs.d/personal/")))
+
 (require 'ido-preview)
 (add-hook 'ido-setup-hook
   (lambda()
