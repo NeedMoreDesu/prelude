@@ -61,7 +61,7 @@
 (require 'open-todo)
 (global-set-key (kbd "H-0") 'open-todo)
 (global-set-key (kbd "H-9") 'open-done)
-(define-key org-mode-map (kbd "C-c 9") 'org-push-task-to-done)
+(define-key org-mode-map (kbd "C-c <backspace>") 'org-push-task-to-done)
 
 (require 'add-quote)
 (global-set-key (kbd "H->") 'add-quote)
