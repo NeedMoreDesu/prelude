@@ -12,7 +12,7 @@
     (or
       (if (re-search-forward "[^\s\n]" nil t)
         (match-beginning 0))
-      (point-min))))
+      (point-max))))
 
 (defun toggle-spacing (prefer-left-side &optional state)
   (interactive "P")
