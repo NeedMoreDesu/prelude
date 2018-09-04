@@ -80,7 +80,6 @@
 
 (require 'dired)
 (define-key dired-mode-map (kbd "<S-return>") 'dired-maybe-insert-subdir)
-(define-key dired-mode-map (kbd "<return>") 'dired-find-alternate-file)
 (require 'crux)
 (define-key global-map (kbd "<S-return>") 'crux-smart-open-line)
 (define-key prelude-mode-map (kbd "<S-return>") nil)
