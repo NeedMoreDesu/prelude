@@ -43,3 +43,4 @@
 (require 'mrb-org-mode)
 (setq org-log-done t)
   
+(setq prelude-clean-whitespace-on-save nil)
