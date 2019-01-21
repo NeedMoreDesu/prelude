@@ -44,3 +44,4 @@
 (setq org-log-done t)
   
 (require 'git-diff-till-branch)
+(setq prelude-clean-whitespace-on-save nil)
