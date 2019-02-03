@@ -38,8 +38,9 @@
 (global-set-key [H-M-return] 'macos-terminal-here)
 
 (require 'company)
-(global-set-key (kbd "H-i") 'company-complete)
-(define-key company-active-map (kbd "H-i") 'company-search-candidates)
+(global-set-key [C-tab] 'company-complete)
+(define-key company-active-map [C-tab] 'company-search-candidates)
+(global-set-key (kbd "H-i") 'complete-symbol)
 
 (require 'close-open-paren)
 (global-set-key (kbd "H-[") 'close-open-paren-left)

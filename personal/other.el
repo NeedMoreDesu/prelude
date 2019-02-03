@@ -22,10 +22,6 @@
 (setq ido-use-filename-at-point nil)
 (setq ido-auto-merge-delay-time 99999)
 
-(when (require 'company nil 'noerror)
-  (package-install 'company))
-(setq-default company-search-filtering t)
-
 (require 'dired-x)
 (defun dired-mouse-find-alternate-file (event)
   "In dired, visit the file or directory you click on instead of the dired buffer."
@@ -42,5 +38,5 @@
 
 (require 'mrb-org-mode)
 (setq org-log-done t)
-  
+
 (setq prelude-clean-whitespace-on-save nil)
