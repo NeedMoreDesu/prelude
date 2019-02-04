@@ -86,6 +86,8 @@
 (define-key prelude-mode-map (kbd "<S-return>") nil)
 
 (require 'flutter)
+(require 'dart-mode)
+(require 'lsp-ui-flycheck)
 (defun flutter-define-key (key fn)
   (define-key dart-mode-map key fn)
   (define-key flutter-mode-map key fn)
@@ -93,4 +95,3 @@
 (flutter-define-key (kbd "H-b") 'flutter-run-or-hot-reload)
 (flutter-define-key (kbd "H-M-b") 'flutter-run)
 (flutter-define-key (kbd "H-h") 'lsp-ui-flycheck-list)
-
