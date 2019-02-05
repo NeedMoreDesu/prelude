@@ -1,8 +1,7 @@
-(unless (require 'lsp-mode nil 'noerror)
-  (package-install 'lsp-mode))
+(require 'load-library)
 
-(unless (require 'lsp-ui nil 'noerror)
-  (package-install 'lsp-ui))
+(load-library 'lsp-mode)
+(load-library 'lsp-ui)
 
 (add-hook 'dart-mode-hook 'lsp)
 

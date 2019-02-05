@@ -1,2 +1,3 @@
-(unless (require 'flutter nil 'noerror)
-  (package-install 'flutter))
+(require 'load-library)
+
+(load-library 'flutter)
