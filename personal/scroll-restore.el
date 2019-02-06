@@ -14,3 +14,12 @@
 
 (global-scroll-restore-mode 1)
 
+;; fix bug with treating lambdas as symbolp
+(defun only-symbolp-this-command (orig-fun &rest args)
+  (if (symbolp this-command)
+    (apply orig-fun args)))
+
+(advice-add 'scroll-restore-pre-command :around #'only-symbolp-this-command)
+(advice-add 'scroll-restore-post-command :around #'only-symbolp-this-command)
+
+

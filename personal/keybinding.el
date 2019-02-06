@@ -95,3 +95,17 @@
 (flutter-define-key (kbd "H-b") 'flutter-run-or-hot-reload)
 (flutter-define-key (kbd "H-M-b") 'flutter-run)
 (flutter-define-key (kbd "H-h") 'lsp-ui-flycheck-list)
+
+(require 'save-position)
+(save-position-define-key global-map (kbd "H-M-1") (kbd "H-1") save-position-1)
+(save-position-define-key global-map (kbd "H-M-2") (kbd "H-2") save-position-2)
+(save-position-define-key global-map (kbd "H-M-3") (kbd "H-3") save-position-3)
+(save-position-define-key global-map (kbd "H-M-4") (kbd "H-4") save-position-4)
+(save-position-define-key global-map (kbd "H-M-5") (kbd "H-5") save-position-5)
+(save-position-define-key global-map (kbd "H-M-6") (kbd "H-6") save-position-6)
+(save-position-define-key global-map (kbd "H-M-7") (kbd "H-7") save-position-7)
+(save-position-define-key global-map (kbd "H-M-8") (kbd "H-8") save-position-8)
+(save-position-define-key global-map (kbd "H-M-9") (kbd "H-9") save-position-9)
+(define-key global-map (kbd "H-0") 'save-position-move-to-prev)
+(define-key global-map (kbd "H-M-0") 'save-position-toggle-prev)
+
