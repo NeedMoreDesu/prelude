@@ -35,7 +35,7 @@
   (goto-char (plist-get arg :begin))
   (recenter)
   (if (fboundp 'scroll-restore-remove)
-    (scroll-restore-remove))
+    (scroll-restore-remove t))
   nil)
 
 (defun save-position-apply-overlay (arg)
@@ -74,9 +74,9 @@
 
 (defun save-position-move-to-prev ()
   (interactive)
-  (if save-position-prev
+  (if (plist-get save-position-prev :begin)
     (save-position-move-to-region save-position-prev)
-    (princ (concat "Position " (plist-get regionsave-position-prev :name) " is not defined"))))
+    (princ (concat "Position " (plist-get save-position-prev :name) " is not defined"))))
 
 (defun save-position-toggle-prev ()
   (interactive)
@@ -95,7 +95,7 @@
                      (save-position-apply-overlay region)))))
          (move-to (lambda ()
                     (interactive)
-                    (if (plist-get arg :begin)
+                    (if (plist-get region :begin)
                       (progn
                         (save-position-store-prev)
                         (save-position-move-to-region region))
