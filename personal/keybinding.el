@@ -17,6 +17,9 @@
 (global-set-key (kbd "H-<kp-add>") 'cm-number-inc)
 (global-set-key (kbd "H-<kp-subtract>") 'cm-number-dec)
 
+(require 'insert-with-replacement)
+(global-set-key (kbd "H-y") 'insert-with-replacement)
+
 (require 'try-keys)
 (global-set-key [H-f1] 'try-keys)
 
