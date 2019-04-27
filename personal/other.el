@@ -1,3 +1,5 @@
+(require 'load-library)
+
 (setq kill-ring-max 300)
 (setq undo-limit 104857600) ; 100 megs
 (setq undo-strong-limit 157286400) ; 150 megs
@@ -42,3 +44,5 @@
 (require 'git-diff-till-branch)
 
 (setq prelude-clean-whitespace-on-save nil)
+
+(load-library 'string-inflection)
