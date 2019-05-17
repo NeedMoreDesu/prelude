@@ -112,3 +112,11 @@
 (define-key global-map (kbd "H-0") 'save-position-move-to-prev)
 (define-key global-map (kbd "H-M-0") 'save-position-toggle-prev)
 
+(require 'smex)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(global-set-key (kbd "C-<f3>") 'kmacro-bind-to-key)
+(global-set-key (kbd "C-<f4>") (lookup-key global-map (kbd "C-x C-k")))
