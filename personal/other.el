@@ -23,6 +23,7 @@
 (require 'ido)
 (setq ido-use-filename-at-point nil)
 (setq ido-auto-merge-delay-time 99999)
+(ido-mode t)
 
 (require 'dired-x)
 (defun dired-mouse-find-alternate-file (event)
