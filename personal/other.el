@@ -20,11 +20,6 @@
 (setq lisp-indent-offset standard-indent)
 (setq initial-major-mode 'emacs-lisp-mode)
 
-(require 'ido)
-(setq ido-use-filename-at-point nil)
-(setq ido-auto-merge-delay-time 99999)
-(ido-mode t)
-
 (require 'dired-x)
 (defun dired-mouse-find-alternate-file (event)
   "In dired, visit the file or directory you click on instead of the dired buffer."
