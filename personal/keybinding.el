@@ -115,3 +115,4 @@
 
 (require 'json-pretty-print)
 (global-set-key (kbd "H-, j") 'json-pretty-print)
+(global-set-key (kbd "H-, H-j") 'json-pretty-print-buffer)
