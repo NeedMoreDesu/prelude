@@ -26,15 +26,11 @@
 (require 'toggle-spacing)
 (global-set-key (kbd "C-z") 'toggle-spacing)
 
-(require 'undo-tree)
-(global-set-key (kbd "s-Z") 'undo-tree-redo)
-(global-set-key (kbd "H-z") 'undo-tree-visualize)
-
 (require 'comment-toggle)
 (global-set-key (kbd "H-/") 'comment-toggle)
 
 (require 'full-indent)
-(global-set-key (kbd "H-,") 'full-indent)
+(global-set-key (kbd "H-, H-,") 'full-indent)
 
 (require 'macos-related)
 (global-set-key [M-return] 'macos-finder-here)
@@ -57,21 +53,15 @@
 (global-set-key (kbd "H-<up>")    'windmove-up)
 (global-set-key (kbd "H-<down>")  'windmove-down)
 
-(require 'main-buffer)
-(global-set-key (kbd "H-.") 'switch-to-main-buffer)
-(global-set-key (kbd "H-M-.") 'set-main-buffer)
-
 (require 'projectile)
-(global-set-key (kbd "H-t") 'projectile-toggle-between-implementation-and-test)
+(global-set-key (kbd "H-, t") 'projectile-toggle-between-implementation-and-test)
 
 (require 'open-todo)
-(global-set-key (kbd "H-0") 'open-todo)
-(global-set-key (kbd "H-9") 'open-done)
 (define-key org-mode-map (kbd "C-c <backspace>") 'org-push-task-to-done)
 
 (require 'add-quote)
-(global-set-key (kbd "H->") 'add-quote)
-(global-set-key (kbd "H-<") 'remove-indent-level)
+(global-set-key (kbd "H-, >") 'add-quote)
+(global-set-key (kbd "H-, <") 'remove-indent-level)
 
 ;; move to custom config files quicker
 (global-set-key (kbd "H-p") (lambda () (interactive) (find-file "~/.emacs.d/personal/")))
@@ -122,3 +112,6 @@
 
 (global-set-key (kbd "C-<f3>") 'kmacro-bind-to-key)
 (global-set-key (kbd "C-<f4>") (lookup-key global-map (kbd "C-x C-k")))
+
+(require 'json-pretty-print)
+(global-set-key (kbd "H-, j") 'json-pretty-print)
