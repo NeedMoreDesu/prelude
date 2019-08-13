@@ -42,3 +42,7 @@
 (setq prelude-clean-whitespace-on-save nil)
 
 (load-library 'string-inflection)
+
+;;; make left alt be free alt - not emacs meta key
+(setq ns-alternate-modifier nil)
+(setq ns-right-alternate-modifier 'meta)
