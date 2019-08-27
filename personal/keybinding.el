@@ -1,3 +1,5 @@
+(require 'load-library)
+
 (setq mac-right-command-modifier 'hyper)
 
 (defun dired-here ()
@@ -116,3 +118,7 @@
 (require 'json-pretty-print)
 (global-set-key (kbd "H-, j") 'json-pretty-print)
 (global-set-key (kbd "H-, H-j") 'json-pretty-print-buffer)
+
+(load-library 'ag)
+(global-set-key (kbd "H-, s") 'ag)
+(global-set-key (kbd "H-, S") 'rgrep)
