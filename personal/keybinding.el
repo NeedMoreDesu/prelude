@@ -11,7 +11,7 @@
 (global-set-key (kbd "H-C-q") 'query-replace-regexp)
 (global-set-key (kbd "H-C-r") 'replace-regexp)
 
-(require 'cmnuminc)
+(load-library 'cmnuminc)
 (global-set-key [?\H-=] 'cm-calc-eval-line)
 (global-set-key [?\H-\M-=] 'cm-calc-eval)
 (global-set-key [?\H-+] 'cm-number-inc)
@@ -19,56 +19,56 @@
 (global-set-key (kbd "H-<kp-add>") 'cm-number-inc)
 (global-set-key (kbd "H-<kp-subtract>") 'cm-number-dec)
 
-(require 'insert-with-replacement)
+(load-library 'insert-with-replacement)
 (global-set-key (kbd "H-y") 'insert-with-replacement)
 
-(require 'try-keys)
+(load-library 'try-keys)
 (global-set-key [H-f1] 'try-keys)
 
-(require 'toggle-spacing)
+(load-library 'toggle-spacing)
 (global-set-key (kbd "C-z") 'toggle-spacing)
 
-(require 'comment-toggle)
+(load-library 'comment-toggle)
 (global-set-key (kbd "H-/") 'comment-toggle)
 
-(require 'full-indent)
+(load-library 'full-indent)
 (global-set-key (kbd "H-, H-,") 'full-indent)
 
-(require 'macos-related)
+(load-library 'macos-related)
 (global-set-key [M-return] 'macos-finder-here)
 (global-set-key [H-M-return] 'macos-terminal-here)
 
-(require 'company)
-(require 'auto-complete)
+(load-library 'company)
+(load-library 'auto-complete)
 (global-set-key [C-tab] 'company-complete)
 (define-key company-active-map [C-tab] 'company-search-candidates)
 (global-set-key (kbd "H-i") 'auto-complete)
 (global-set-key (kbd "H-M-i") 'complete-symbol)
 
-(require 'close-open-paren)
+(load-library 'close-open-paren)
 (global-set-key (kbd "H-[") 'close-open-paren-left)
 (global-set-key (kbd "H-]") 'close-open-paren-right)
 
-(require 'windmove)
+(load-library 'windmove)
 (global-set-key (kbd "H-<left>")  'windmove-left)
 (global-set-key (kbd "H-<right>") 'windmove-right)
 (global-set-key (kbd "H-<up>")    'windmove-up)
 (global-set-key (kbd "H-<down>")  'windmove-down)
 
-(require 'projectile)
+(load-library 'projectile)
 (global-set-key (kbd "H-, t") 'projectile-toggle-between-implementation-and-test)
 
-(require 'open-todo)
+(load-library 'open-todo)
 (define-key org-mode-map (kbd "C-c <backspace>") 'org-push-task-to-done)
 
-(require 'add-quote)
+(load-library 'add-quote)
 (global-set-key (kbd "H-, >") 'add-quote)
 (global-set-key (kbd "H-, <") 'remove-indent-level)
 
 ;; move to custom config files quicker
 (global-set-key (kbd "H-p") (lambda () (interactive) (find-file "~/.emacs.d/personal/")))
 
-(require 'ido-preview)
+(load-library 'ido-preview)
 (add-hook 'ido-setup-hook
   (lambda ()
     (define-key ido-completion-map (kbd "C-M-p") (lookup-key ido-completion-map (kbd "C-p")))
@@ -76,24 +76,21 @@
     (define-key ido-completion-map (kbd "C-p") 'ido-preview-backward)
     (define-key ido-completion-map (kbd "C-n") 'ido-preview-forward)))
 
-(require 'dired)
+(load-library 'dired)
 (define-key dired-mode-map (kbd "<S-return>") 'dired-maybe-insert-subdir)
-(require 'crux)
+(load-library 'crux)
 (define-key global-map (kbd "<S-return>") 'crux-smart-open-line)
 (define-key prelude-mode-map (kbd "<S-return>") nil)
 
-(require 'flutter)
-(require 'dart-mode)
-(require 'lsp-ui-flycheck)
+(load-library 'flutter)
+(load-library 'dart-mode)
 (defun flutter-define-key (key fn)
   (define-key dart-mode-map key fn)
-  (define-key flutter-mode-map key fn)
-  (define-key lsp-ui-flycheck-list-mode-map key fn))
+  (define-key flutter-mode-map key fn))
 (flutter-define-key (kbd "H-b") 'flutter-run-or-hot-reload)
 (flutter-define-key (kbd "H-M-b") 'flutter-run)
-(flutter-define-key (kbd "H-h") 'lsp-ui-flycheck-list)
 
-(require 'save-position)
+(load-library 'save-position)
 (save-position-define-key global-map (kbd "H-M-1") (kbd "H-1") save-position-1)
 (save-position-define-key global-map (kbd "H-M-2") (kbd "H-2") save-position-2)
 (save-position-define-key global-map (kbd "H-M-3") (kbd "H-3") save-position-3)
@@ -106,7 +103,7 @@
 (define-key global-map (kbd "H-0") 'save-position-move-to-prev)
 (define-key global-map (kbd "H-M-0") 'save-position-toggle-prev)
 
-(require 'smex)
+(load-library 'smex)
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
@@ -115,7 +112,7 @@
 (global-set-key (kbd "C-<f3>") 'kmacro-bind-to-key)
 (global-set-key (kbd "C-<f4>") (lookup-key global-map (kbd "C-x C-k")))
 
-(require 'json-pretty-print)
+(load-library 'json-pretty-print)
 (global-set-key (kbd "H-, j") 'json-pretty-print)
 (global-set-key (kbd "H-, H-j") 'json-pretty-print-buffer)
 

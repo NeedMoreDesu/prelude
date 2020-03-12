@@ -1,9 +1,9 @@
 (require 'paren)
-(set-face-attribute 'show-paren-match-face nil :background "gray35")
+
 (show-paren-mode t)
 (setq show-paren-style 'expression show-paren-delay 0)
-(when (require 'highlight-parentheses nil 'noerror)
-  (package-install 'highlight-parentheses))
+
+(load-library 'highlight-parentheses)
 (define-globalized-minor-mode global-highlight-parentheses-mode
   highlight-parentheses-mode
   (lambda ()
