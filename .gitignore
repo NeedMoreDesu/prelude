@@ -15,7 +15,6 @@ custom.el
 places
 .smex-items
 savefile/
-/prelude-modules.el
 projectile-bookmarks.eld
 session*
 .cask
@@ -27,3 +26,6 @@ network-security.data
 .lsp-session*
 ido.last
 smex-items
+prelude-cheatsheet.el
+prelude-cheatsheet.aux
+prelude-cheatsheet.log
