@@ -46,3 +46,5 @@
 ;;; make left alt be free alt - not emacs meta key
 (setq ns-alternate-modifier nil)
 (setq ns-right-alternate-modifier 'meta)
+
+(add-to-list 'auto-mode-alist '("\\.pac\\'" . javascript-mode))
