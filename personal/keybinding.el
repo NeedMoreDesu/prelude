@@ -111,6 +111,9 @@
 
 (global-set-key (kbd "C-<f3>") 'kmacro-bind-to-key)
 (global-set-key (kbd "C-<f4>") (lookup-key global-map (kbd "C-x C-k")))
+(global-set-key (kbd "H-, m m") 'kmacro-end-or-call-macro)
+(global-set-key (kbd "H-, m s") 'kmacro-start-macro-or-insert-counter)
+(global-set-key (kbd "H-, m k") (lookup-key global-map (kbd "C-x C-k")))
 
 (load-library 'json-pretty-print)
 (global-set-key (kbd "H-, j") 'json-pretty-print)
