@@ -48,3 +48,6 @@
 (setq ns-right-alternate-modifier 'meta)
 
 (add-to-list 'auto-mode-alist '("\\.pac\\'" . javascript-mode))
+
+(load-library 'lua-mode)
+(setq-default lua-indent-level 2)
