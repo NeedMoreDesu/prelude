@@ -4,3 +4,7 @@
 (ido-mode t)
 
 (load-library 'smex)
+
+(load-library 'ido-at-point)
+(setq-default ido-enable-flex-matching t)
+(ido-at-point-mode t)

@@ -20,3 +20,4 @@
   (add-hook 'company-mode-hook (lambda ()
                                  (add-to-list 'company-backends 'company-capf)))
   (company-flx-mode +1))
+

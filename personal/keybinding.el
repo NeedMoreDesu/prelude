@@ -40,6 +40,7 @@
 
 (load-library 'company)
 (load-library 'auto-complete)
+(load-library 'fuzzy)
 (global-set-key [C-tab] 'company-complete)
 (define-key company-active-map [C-tab] 'company-search-candidates)
 (global-set-key (kbd "H-i") 'auto-complete)
