@@ -126,3 +126,6 @@
 
 (load-library 'lua-mode)
 (define-key lua-mode-map (kbd "C-c C-e") (lambda () (interactive) (call-process-shell-command "/Applications/love.app/Contents/MacOS/love ." nil 0)))
+
+;; don't quit me.
+(global-unset-key (kbd "s-q"))

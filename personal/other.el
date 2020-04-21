@@ -51,3 +51,6 @@
 
 (load-library 'lua-mode)
 (setq-default lua-indent-level 2)
+
+;;; maximize window for macos on emacs start
+(set-frame-parameter nil 'fullscreen 'maximized)
