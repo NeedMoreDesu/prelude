@@ -54,3 +54,6 @@
 
 ;;; maximize window for macos on emacs start
 (set-frame-parameter nil 'fullscreen 'maximized)
+
+(load-library 'reverse-im)
+(reverse-im-activate '("russian-computer" "ukrainian-computer"))
