@@ -129,3 +129,6 @@
 
 ;; don't quit me.
 (global-unset-key (kbd "s-q"))
+
+(load-library 'paste-into-temp-buffer)
+(global-set-key (kbd "H-b") 'paste-into-temp-buffer)

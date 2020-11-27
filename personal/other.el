@@ -57,3 +57,7 @@
 
 (load-library 'reverse-im)
 (reverse-im-activate '("russian-computer" "ukrainian-computer"))
+
+(setq-default dired-dnd-protocol-alist nil)
+
+
