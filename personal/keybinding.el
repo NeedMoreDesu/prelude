@@ -132,3 +132,6 @@
 
 (load-library 'paste-into-temp-buffer)
 (global-set-key (kbd "H-b") 'paste-into-temp-buffer)
+
+(global-set-key (kbd "H-, C") (lambda () (interactive) (delete-other-windows) (split-window-right)))
+(global-set-key (kbd "H-, c") 'compare-windows)
