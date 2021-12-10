@@ -60,4 +60,6 @@
 
 (setq-default dired-dnd-protocol-alist nil)
 
-
+(setq-default python-shell-interpreter "python3")
+(setq-default python-shell-completion-native-enable nil)
+(setq-default python-eldoc-get-doc nil)
