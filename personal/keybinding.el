@@ -21,6 +21,7 @@
 
 (load-library 'insert-with-replacement)
 (global-set-key (kbd "H-y") 'insert-with-replacement)
+(global-set-key (kbd "H-M-y") 'insert-with-replacement-set-template)
 
 (load-library 'try-keys)
 (global-set-key [H-f1] 'try-keys)
