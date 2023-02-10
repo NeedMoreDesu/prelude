@@ -59,5 +59,6 @@
 (reverse-im-activate '("russian-computer" "ukrainian-computer"))
 
 (setq-default dired-dnd-protocol-alist nil)
+(require 'xcode-assertion-failure)
 
-
+(require 'swagger-parse)
