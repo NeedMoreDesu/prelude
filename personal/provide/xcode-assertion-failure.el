@@ -26,3 +26,5 @@
   (interactive)
   (xcode-assertion-failure-cleanup)
   (xcode-assertion-failure-compare))
+
+(provide 'xcode-assertion-failure)

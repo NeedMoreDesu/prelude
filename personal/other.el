@@ -59,6 +59,9 @@
 (reverse-im-activate '("russian-computer" "ukrainian-computer"))
 
 (setq-default dired-dnd-protocol-alist nil)
+(require 'xcode-assertion-failure)
+
+(require 'swagger-parse)
 
 (setq-default python-shell-interpreter "python3")
 (setq-default python-shell-completion-native-enable nil)
