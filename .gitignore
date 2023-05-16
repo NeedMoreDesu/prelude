@@ -29,3 +29,9 @@ smex-items
 prelude-cheatsheet.el
 prelude-cheatsheet.aux
 prelude-cheatsheet.log
+transient/
+var/
+.cache/
+.lsp-session*
+gotools/
+eln-cache/
