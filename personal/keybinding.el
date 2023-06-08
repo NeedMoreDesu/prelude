@@ -136,3 +136,6 @@
 
 (global-set-key (kbd "H-, C") (lambda () (interactive) (delete-other-windows) (split-window-right)))
 (global-set-key (kbd "H-, c") 'compare-windows)
+
+(require 'unix-time-converter)
+(global-set-key (kbd "H-, u") 'unix-time-at-point)

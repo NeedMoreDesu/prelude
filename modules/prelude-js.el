@@ -1,11 +1,9 @@
 ;;; prelude-js.el --- Emacs Prelude: js-mode configuration.
 ;;
-;; Copyright © 2011-2020 Bozhidar Batsov
+;; Copyright © 2011-2023 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
-;; Version: 1.0.0
-;; Keywords: convenience
 
 ;; This file is not part of GNU Emacs.
 
@@ -37,16 +35,18 @@
 
 (require 'js2-mode)
 
-(add-to-list 'auto-mode-alist '("\\.js\\'"    . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.pac\\'"   . js2-mode))
-(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'"     . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.[cm]js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.pac\\'"    . js2-mode))
+(add-to-list 'interpreter-mode-alist '("node"  . js2-mode))
 
 (with-eval-after-load 'js2-mode
   (defun prelude-js-mode-defaults ()
     ;; electric-layout-mode doesn't play nice with smartparens
     (setq-local electric-layout-rules '((?\; . after)))
     (setq mode-name "JS2")
-    (js2-imenu-extras-mode +1))
+    (js2-imenu-extras-mode +1)
+    (subword-mode +1))
 
   (setq prelude-js-mode-hook 'prelude-js-mode-defaults)
 

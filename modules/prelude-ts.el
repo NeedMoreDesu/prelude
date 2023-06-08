@@ -1,10 +1,8 @@
 ;;; prelude-ts.el --- Emacs Prelude: Typescript programming support.
 ;;
-;; Copyright © 2011-2020 LEE Dongjun
+;; Copyright © 2011-2023 LEE Dongjun
 ;;
 ;; Author: LEE Dongjun <redongjun@gmail.com>
-;; Version: 1.0.0
-;; Keywords: convenience typescript
 
 ;; This file is not part of GNU Emacs.
 
@@ -32,9 +30,7 @@
 ;;; Code:
 
 (require 'prelude-programming)
-(prelude-require-packages '(tide))
-
-(require 'typescript-mode)
+(prelude-require-packages '(tide typescript-mode))
 
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 
@@ -48,7 +44,10 @@
     (tide-hl-identifier-mode +1))
 
   ;; formats the buffer before saving
-  (add-hook 'before-save-hook 'tide-format-before-save)
+  (add-hook 'before-save-hook
+            (lambda ()
+              (when prelude-format-on-save
+                (tide-format-before-save))))
 
   (setq prelude-ts-mode-hook 'prelude-ts-mode-defaults)
 
