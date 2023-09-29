@@ -136,3 +136,6 @@
 
 (require 'unix-time-converter)
 (global-set-key (kbd "H-, u") 'unix-time-at-point)
+
+(require 'ollama)
+(global-set-key (kbd "H-o") 'ollama-prompt-region)
