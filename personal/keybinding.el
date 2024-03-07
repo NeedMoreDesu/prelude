@@ -139,3 +139,17 @@
 
 (require 'ollama)
 (global-set-key (kbd "H-o") 'ollama-prompt-region)
+
+(defun my-rebind-smerge-map ()
+  (let ((my-smerge-prefix-map (make-sparse-keymap)))
+    ;; Bind the new prefix to `my-smerge-prefix-map`
+    (define-key smerge-mode-map (kbd "H-m") my-smerge-prefix-map)
+    
+    ;; Iterate over `smerge-basic-map` and rebind keys under the new prefix
+    (map-keymap
+      (lambda (key command)
+        (define-key my-smerge-prefix-map (vector key) command))
+      smerge-basic-map)))
+
+(eval-after-load 'smerge-mode
+  '(my-rebind-smerge-map))
