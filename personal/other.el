@@ -14,7 +14,7 @@
 (setq-default truncate-partial-width-windows nil)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-always-indent t)
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 (setq-default standard-indent 2)
 (setq-default tab-width standard-indent)
 (setq lisp-indent-offset standard-indent)
@@ -66,4 +66,3 @@
 
 (load-library 'vlf)
 (load-library 'vlf-setup)
-
