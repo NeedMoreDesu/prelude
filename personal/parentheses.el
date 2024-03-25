@@ -8,6 +8,6 @@
   (lambda ()
     (highlight-parentheses-mode t)))
 (global-highlight-parentheses-mode t)
-(setq highlight-parentheses-colors '("green"))
-(setq highlight-parentheses-background-colors '("black" "red" "blue" "red3" "blue3" "red4" "blue4" "DarkOrchid1" "DarkOrchid2" "DarkOrchid3" "DarkOrchid4" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50"))
+(setq highlight-parentheses-background-colors '("green"))
+(setq highlight-parentheses-colors '("black" "red" "blue" "red3" "blue3" "red4" "blue4" "DarkOrchid1" "DarkOrchid2" "DarkOrchid3" "DarkOrchid4" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50" "gray50"))
 
