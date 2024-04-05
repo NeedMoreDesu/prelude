@@ -153,3 +153,11 @@
 
 (eval-after-load 'smerge-mode
   '(my-rebind-smerge-map))
+
+(global-set-key (kbd "H-, i c") 'string-inflection-lower-camelcase)
+(global-set-key (kbd "H-, i C") 'string-inflection-camelcase)
+(global-set-key (kbd "H-, i s") 'string-inflection-underscore)
+(global-set-key (kbd "H-, i S") 'string-inflection-upcase)
+(global-set-key (kbd "H-, i u") 'string-inflection-underscore)
+(global-set-key (kbd "H-, i U") 'string-inflection-upcase)
+(global-set-key (kbd "H-, i l") 'string-inflection-lisp)
