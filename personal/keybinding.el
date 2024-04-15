@@ -161,3 +161,6 @@
 (global-set-key (kbd "H-, i u") 'string-inflection-underscore)
 (global-set-key (kbd "H-, i U") 'string-inflection-upcase)
 (global-set-key (kbd "H-, i l") 'string-inflection-lisp)
+
+;; remove mwheel font zoom up/down
+(setq mouse-wheel-scroll-amount '(1 ((shift) . hscroll) ((meta) . nil)))
