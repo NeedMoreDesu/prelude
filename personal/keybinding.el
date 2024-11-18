@@ -164,3 +164,5 @@
 
 ;; remove mwheel font zoom up/down
 (setq mouse-wheel-scroll-amount '(1 ((shift) . hscroll) ((meta) . nil)))
+(global-set-key (kbd "C-<wheel-down>") 'mwheel-scroll)
+(global-set-key (kbd "C-<wheel-up>") 'mwheel-scroll)
