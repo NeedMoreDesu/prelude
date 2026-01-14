@@ -19,6 +19,7 @@
 (setq-default tab-width standard-indent)
 (setq lisp-indent-offset standard-indent)
 (setq initial-major-mode 'emacs-lisp-mode)
+(setq prelude-whitespace nil)
 
 (require 'dired-x)
 (defun dired-mouse-find-alternate-file (event)
