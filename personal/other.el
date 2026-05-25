@@ -67,3 +67,5 @@
 
 (load-library 'vlf)
 (load-library 'vlf-setup)
+
+(setq dired-listing-switches "-lt") ; dired sort by date as default
